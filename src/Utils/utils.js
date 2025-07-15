@@ -3,8 +3,8 @@ import gameOver from "../assets/game-over.mp3";
 
 const audioGameOver = new Audio(gameOver);
 const audioClick = new Audio(clickSound);
-audioGameOver.preload();
-audioClick.preload();
+audioGameOver.load();
+audioClick.load();
 
 export function CleanupCharArray(data) {
   return data.map((char) => {
