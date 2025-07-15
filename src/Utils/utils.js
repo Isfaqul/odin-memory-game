@@ -1,6 +1,11 @@
 import clickSound from "../assets/click.mp3";
 import gameOver from "../assets/game-over.mp3";
 
+const audioGameOver = new Audio(gameOver);
+const audioClick = new Audio(clickSound);
+audioGameOver.preload();
+audioClick.preload();
+
 export function CleanupCharArray(data) {
   return data.map((char) => {
     let obj = {};
@@ -14,13 +19,11 @@ export function CleanupCharArray(data) {
 }
 
 export function playClick() {
-  const audio = new Audio(clickSound);
-  audio.currentTime = 0;
-  audio.play();
+  audioClick.currentTime = 0;
+  audioClick.play();
 }
 
 export function playGameOver() {
-  const audio = new Audio(gameOver);
-  audio.currentTime = 0;
-  audio.play();
+  audioGameOver.currentTime = 0;
+  audioGameOver.play();
 }
