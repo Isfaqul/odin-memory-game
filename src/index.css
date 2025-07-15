@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-caesar: "Caesar Dressing", sans-serif;
+}
+
+body {
+  @apply font-caesar;
+}
